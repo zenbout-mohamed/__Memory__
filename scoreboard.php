@@ -9,7 +9,8 @@
     }
 
     public function getTopScores(int $limit = 10): array {
-        usort($this->score);
+        usort($this->scores, fn($a, $b) => $a['score'] <=> $b['score']);
+        return array_slice($this->scores, 0, $limit);
     }
  }
  
