@@ -18,7 +18,7 @@ $scoreboard->addScore($player->getName(), 30);
 echo "<h1>Plateau de Jeu</h1>";
 
 foreach ($cards as $card) {
-   echo "<span> ? </span>"
+   echo "<span> ? </span>";
 }
 
 
