@@ -13,8 +13,16 @@ class Player {
         $this->scores[] = $score;
     }
 
-    public
+    public function getBestScore(): ?int {
+        return !empty($this->scores) ? min($this->scores) : null;
+    }
 
+    public function getScores(): ?array {
+        return $this->scores;
+    }
+    public function getName(): string {
+        return $this->name;
+    }
 }
 
 
