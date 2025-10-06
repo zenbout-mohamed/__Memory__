@@ -15,4 +15,16 @@ $player->addScore(30);
 $scoreboard->addScore($player->getName(), 30);
 
 
-echo "<h1>Plateau de Jeu</h1>";?>
+echo "<h1>Plateau de Jeu</h1>";
+
+foreach ($cards as $card) {
+   echo "<span> ? </span>"
+}
+
+
+echo "<h2>Classement :</h2>";
+foreach ($scoreboard->getTopScores() as $entry) {
+    echo $entry['player'] . " : " . $entry['score'] . " coups<br>";
+}
+
+?>
