@@ -33,7 +33,11 @@ foreach ($scoreboard->getTopScores() as $entry) {
     <title>Jeux-Memory</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class ="bg-gradient-to-br from-blue-100 to-indigo-200 min-h-screen flex flex-col items-center justify-center">
+    <section class ="bg-white p-8 rounded-2xl shadow-xl w-full max-w-3xl text-center">
+        <h1 class ="text-3xl font-bold text-indigo-600 mb-8"></h1>
+
+
+    </section>
 </body>
 </html>
