@@ -15,7 +15,24 @@ if (!isset($_SESSION['game'])) {
 
 
 
-if 
+if (isset($_GET['flip'])){
+    $index = (int)$_GET['flip'];
+
+    if(!in_array($index, $_SESSION['found']) && !in_array($index, $_SESSION['flipped'])){
+        $_SESSION['flipped'][] = $index;
+    }
+
+    if (count($_SESSION['flipped']) === 2) {
+        $i1 = $_SESSION['flipped'][0];
+        $i2 = $_SESSION['flipped'][1];
+
+        if ($_SESSION['cards'][$i1] === $_SESSION['cards'][$i2] ) {
+            $SESSION_['found'][] = $i1;
+            $SESSION_['found'][] = $i2;
+        }
+        $_SESSION['flipped'] = [];
+    }
+}
 $game = new Game(4);
 $cards = $game->getCards();
 
