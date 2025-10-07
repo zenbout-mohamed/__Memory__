@@ -3,6 +3,19 @@ require_once "game.php";
 require_once "player.php";
 require_once "scoreboard.php";
 
+
+if (!isset($_SESSION['game'])) {
+    $game = new Game(4);
+    $_SESSION['cards'] = array_map(fn($c) => $c->getValue(), $game->getCards());
+    $_SESSION['found'] = [];
+    $_SESSION['flipped'] = [];
+} else {
+    $cards = $_SESSION['cards'];
+}
+
+
+
+if 
 $game = new Game(4);
 $cards = $game->getCards();
 
