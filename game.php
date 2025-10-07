@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "card.php";
 
 class Game {
